@@ -7,6 +7,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use {
+    "williamboman/mason.nvim",
+    "mfussenegger/nvim-dap",
+    "jay-babu/mason-nvim-dap.nvim",
+  }
+
   -- whick-key
   use {
     "folke/which-key.nvim",
@@ -26,7 +32,7 @@ return require('packer').startup(function(use)
     end
        }
   -- DAP
-  use 'mfussenegger/nvim-dap'
+  --  use 'mfussenegger/nvim-dap'
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -59,7 +65,7 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
-  use("mbbill/undotree")
+ use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
 
