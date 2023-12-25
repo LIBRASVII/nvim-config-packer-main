@@ -165,6 +165,7 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  -- WORKING ON
   d = {
       name = "Dap",
     --  Breakpoint = {"<cmd>lua require'dap'.toggle_breakpoint()<cr>", "toggle_breakpoint"},
