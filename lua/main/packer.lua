@@ -7,6 +7,24 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- whick-key
+  use {
+    "folke/which-key.nvim",
+      opts = {
+          defaults = {
+              ["<leader>d"] = {name = "+debug"},
+          }
+      },
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+       }
   -- DAP
   use 'mfussenegger/nvim-dap'
 
