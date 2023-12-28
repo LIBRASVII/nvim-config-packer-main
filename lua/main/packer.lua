@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
           }
       },
     config = function()
-      vim.o.timeout = true
+     vim.o.timeout = true
       vim.o.timeoutlen = 300
       require("which-key").setup {
         -- your configuration comes here
@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
       }
     end
        }
+
   -- DAP
   --  use 'mfussenegger/nvim-dap'
 
