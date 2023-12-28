@@ -167,9 +167,10 @@ local mappings = {
   },
   -- WORKING ON
   d = {
-      name = "Dap",
+    name = "Dap",
     c = {"<cmd>lua require('dap').continue()<cr>", "Continue"},
-    b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+    b = {"<cmd>lua require('dap').set_breakpoint()<cr>", "Set Breakpoint"},
+    ["F8"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint"},
      },
   }
 
