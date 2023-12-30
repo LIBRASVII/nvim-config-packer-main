@@ -6,10 +6,7 @@ local dap = require("dap")
 dap.adapters.gdb = {
   type = "executable",
   command = "gdb",
-  args = { "-i", "dap" }
-}
-
-dap.configurations.c = {
+  args = { "-i", "dap" },
   {
     name = "Launch",
     type = "gdb",
@@ -20,3 +17,4 @@ dap.configurations.c = {
     cwd = "${workspaceFolder}",
   },
 }
+
