@@ -170,8 +170,13 @@ local mappings = {
   d = {
     name = "Dap",
     c = {"<cmd>lua require('dap').continue()<cr>", "Continue"},
+    o = {"<cmd>lua require('dap').step_over()<c>", "Step Over"},
+    i = {"<cmd>lua require('dap').step_into()<cr>", "Step Into"},
+    u = {"<cmd>lua require('dap').step_out()<cr>", "Step Out"},
     s = {"<cmd>lua require('dap').set_breakpoint()<cr>", "Set Breakpoint"},
     b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint"},
+    p = {"<cmd>lua require('dap').repl.open()<cr>", "Repl Open"},
+    r = {"<cmd>lua require('dap').run_last()<cr>", "Run Last"},
      },
   }
 

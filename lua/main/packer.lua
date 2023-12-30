@@ -11,6 +11,12 @@ return require('packer').startup(function(use)
 
   use {
     "williamboman/mason.nvim",
+    opts = {
+        ensure_installed = {
+            "clangd",
+            "clang-format",
+        }
+    },
     "mfussenegger/nvim-dap",
     "jay-babu/mason-nvim-dap.nvim",
   }
