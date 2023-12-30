@@ -7,8 +7,13 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Nulls
+  use 'nvimtools/none-ls.nvim'
+
+  -- WakaTime
   use 'wakatime/vim-wakatime'
 
+  -- Mason
   use {
     "williamboman/mason.nvim",
     opts = {
