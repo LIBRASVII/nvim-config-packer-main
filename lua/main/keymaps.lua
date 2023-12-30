@@ -165,12 +165,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
   -- WORKING ON
   d = {
     name = "Dap",
     c = {"<cmd>lua require('dap').continue()<cr>", "Continue"},
-    b = {"<cmd>lua require('dap').set_breakpoint()<cr>", "Set Breakpoint"},
-    ["F8"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint"},
+    s = {"<cmd>lua require('dap').set_breakpoint()<cr>", "Set Breakpoint"},
+    b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint"},
      },
   }
 
