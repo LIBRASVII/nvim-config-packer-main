@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+    use 'romgrk/barbar.nvim'
+
     -- Define your keymaps, commands, and autocommands as simple Lua tablesi,...
     use  { 'mrjones2014/legendary.nvim',
       version = 'v2.1.0',
