@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+local opts = { noremap = true, silent = true }
+
 -- Open like tree nvim
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -29,7 +31,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- vim.keymap.set("i", "<C-c>", "<Esc>")
+
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -69,7 +72,6 @@ vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
 vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
 
 -- Switch between buffers
-local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
 vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
@@ -105,6 +107,10 @@ vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+
+-- Color Pick
+vim.keymap.set("n", "<C-x>", "<cmd>PickColor<cr>", opts)
+vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")

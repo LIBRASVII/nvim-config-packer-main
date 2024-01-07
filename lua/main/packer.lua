@@ -7,6 +7,26 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use ({"ziontee113/color-picker.nvim",
+        config = function()
+            require("color-picker")
+        end,
+    })
+
+    -- Tailwindscss colorizer
+    use({ "roobert/tailwindcss-colorizer-cmp.nvim",
+      -- optionally, override the default options:
+      config = function()
+        require("tailwindcss-colorizer-cmp").setup({
+          color_square_width = 2,
+        })
+      end
+    })
+
+    -- Prettier
+    use 'MunifTanjim/prettier.nvim'
+
+    -- Top bar (buffer)
     use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
     use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
     use 'romgrk/barbar.nvim'
@@ -54,6 +74,7 @@ return require('packer').startup(function(use)
             ensure_installed = {
                 "clangd",
                 "clang-format",
+                "css-lsp",
             }
         },
         "mfussenegger/nvim-dap",
