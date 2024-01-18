@@ -7,6 +7,31 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Buffer Line
+    use {'akinsho/bufferline.nvim', tag = "*", config = function ()
+        vim.opt.termguicolors = true
+        require("bufferline").setup{}
+        -- requires = 'nvim-tree/nvim-web-devicons'
+    end }
+
+    -- Autopair
+    use{ 'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6', --recomended as each new version will have breaking changes
+    config=function ()
+        require('ultimate-autopair').setup({
+                --Config goes here
+                })
+        end,
+    }
+
+    -- HTML/CSS view
+    use { "turbio/bracey.vim",
+      cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
+      build = "npm install --prefix server",
+    }
+
+    -- Color Pick
     use ({"ziontee113/color-picker.nvim",
         config = function()
             require("color-picker")
