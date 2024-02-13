@@ -8,17 +8,19 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Buffer Line
-    use {'akinsho/bufferline.nvim', tag = "*", config = function ()
-        vim.opt.termguicolors = true
-        require("bufferline").setup{}
-        -- requires = 'nvim-tree/nvim-web-devicons'
-    end }
+    use {'akinsho/bufferline.nvim',
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function ()
+        -- vim.opt.termguicolors = true
+        require("bufferline").setup()
+        end,
+    }
 
     -- Autopair
     use{ 'altermo/ultimate-autopair.nvim',
     event={'InsertEnter','CmdlineEnter'},
     branch='v0.6', --recomended as each new version will have breaking changes
-    config=function ()
+    config = function ()
         require('ultimate-autopair').setup({
                 --Config goes here
                 })
@@ -35,7 +37,7 @@ return require('packer').startup(function(use)
     use ({"ziontee113/color-picker.nvim",
         config = function()
             require("color-picker")
-        end,
+        end
     })
 
     -- Tailwindscss colorizer
@@ -71,10 +73,9 @@ return require('packer').startup(function(use)
     use 'mrjones2014/smart-splits.nvim'
 
     -- RGB color
-    use {
-        'norcalli/nvim-colorizer.lua',
+    use { 'norcalli/nvim-colorizer.lua',
         config = function()
-            require('colorizer').setup()
+            require('colorizer')
         end
     }
 
