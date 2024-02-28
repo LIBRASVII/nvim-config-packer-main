@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- java lsp
+    use 'mfussenegger/nvim-jdtls'
+
     -- Buffer Line
     use {'akinsho/bufferline.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
